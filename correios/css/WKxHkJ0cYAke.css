@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "rawline";
+    src: url("../fonts/ifwNX0KJ1Hia.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "rawline";
+    src: url("../fonts/7Cw0FeHmOjRh.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "rawline";
+    src: url("../fonts/GADU9Hq22NDL.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "rawline";
+    src: url("../fonts/D1tl8rNYx4H4.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

